@@ -27,7 +27,9 @@ stages:
     type: apt
     source:
       packages:
+      - vim
       - neovim
+      - python3-nautilus
 
   - name: set-image-name-abroot
     type: includes
