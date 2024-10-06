@@ -30,6 +30,7 @@ stages:
       - vim
       - neovim
       - python3-nautilus
+      - libfuse2t64
 
   - name: set-image-name-abroot
     type: includes
