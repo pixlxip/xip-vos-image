@@ -32,6 +32,7 @@ stages:
       - python3-nautilus
       - libfuse2t64
       - git
+      - rclone
 
   - name: set-image-name-abroot
     type: includes
