@@ -30,9 +30,11 @@ stages:
       - vim
       - neovim
       - python3-nautilus
+      - python3-cairo
       - libfuse2t64
       - git
       - rclone
+      - input-remapper-gtk
 
   - name: set-image-name-abroot
     type: includes
