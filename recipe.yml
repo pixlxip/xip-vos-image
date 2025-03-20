@@ -36,6 +36,15 @@ stages:
       - rclone
       - input-remapper-gtk
 
+  - name: add-debian-sources
+        type: shell
+        commands:
+          - mv /etc/sid.sources /etc/apt/sources.list.d/
+          - mv /etc/experimental.sources /etc/apt/sources.list.d/
+          - mv /etc/trixie.sources /etc/apt/sources.list.d/
+          - mv /etc/apt/sources.list.d/vanilla-base.sources /etc/
+          - apt update
+
   - name: install-gnome-48
     type: shell
     commands:
