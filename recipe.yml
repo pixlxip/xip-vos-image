@@ -36,7 +36,7 @@ stages:
       - rclone
       - input-remapper-gtk
 
-    - name: install-gnome-48
+  - name: install-gnome-48
     type: shell
     commands:
       - apt install -t trixie --fix-missing --fix-broken -y libtinysparql-3.0-0=3.8.2-5+b1
