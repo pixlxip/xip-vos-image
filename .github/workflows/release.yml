@@ -31,7 +31,7 @@ jobs:
 
     - name: Verify Base Image Integrity
       run: |
-        gh attestation verify oci://ghcr.io/${{ env.BASE_IMAGE }} --owner Vanilla-OS
+        gh attestation verify oci://ghcr.io/${{ env.BASE_IMAGE }} --owner deezhizyu
       env:
         GH_TOKEN: ${{ github.token }}
 
