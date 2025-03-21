@@ -48,7 +48,7 @@ stages:
   - name: install-gnome-48
     type: shell
     commands:
-      - apt install -t trixie --fix-missing --fix-broken -y libtinysparql-3.0-0=3.8.2-5+b1
+      - apt install -t trixie --fix-missing --fix-broken -y libtinysparql-3.0-0
       - apt-mark hold libtinysparql-3.0-0
 
       - apt-mark unhold gnome-control-center
