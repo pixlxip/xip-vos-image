@@ -1,8 +1,8 @@
-name: pixl_xip's VOS # Replace this name with your image name
-id: xip-vos # Replace this ID with your image ID
+name: pixl_xip's VOS
+id: xip-vos
 stages:
 - id: build
-  base: ghcr.io/deezhizyu/vos-custom-base:main # Optionally, Replace this image URL with a different one i.e. nvidia:main, etc
+  base: ghcr.io/deezhizyu/vos-custom-base:main # For Gnome 48 and Sid repo
   singlelayer: false
   labels:
     maintainer: pixl_xip # Optionally, Replace this with your name
@@ -23,7 +23,7 @@ stages:
 
   # Put your custom actions behind this comment
 
-  - name: packages # Sample module using the built-in Apt module to install packages
+  - name: packages
     type: apt
     source:
       packages:
@@ -35,6 +35,16 @@ stages:
       - git
       - rclone
       - input-remapper-gtk
+      - rustup
+
+  - name: rustup
+    type: shell
+    commands:
+    - rustup default stable
+
+  - name: kanata
+    type: shell
+    - cargo install kanata --root /usr/
 
   - name: set-image-name-abroot
     type: includes
