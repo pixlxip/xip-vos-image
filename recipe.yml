@@ -44,6 +44,7 @@ stages:
 
   - name: kanata
     type: shell
+    commands:
     - cargo install kanata --root /usr/
 
   - name: set-image-name-abroot
