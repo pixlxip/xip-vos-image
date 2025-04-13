@@ -2,7 +2,7 @@ name: pixl_xip's VOS
 id: xip-vos
 stages:
 - id: build
-  base: ghcr.io/pixlxip/vos-custom-base
+  base: ghcr.io/pixlxip/vos-custom-base:main
   singlelayer: false
   labels:
     maintainer: pixl_xip # Optionally, Replace this with your name
