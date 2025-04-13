@@ -2,7 +2,7 @@ name: pixl_xip's VOS
 id: xip-vos
 stages:
 - id: build
-  base: ghcr.io/deezhizyu/vos-custom-base:main # For Gnome 48 and Sid repo
+  base: ghcr.io/vanilla-os/desktop
   singlelayer: false
   labels:
     maintainer: pixl_xip # Optionally, Replace this with your name
