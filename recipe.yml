@@ -2,7 +2,7 @@ name: pixl_xip's VOS
 id: xip-vos
 stages:
 - id: build
-  base: ghcr.io/pixlxip/vos-custom-base:main
+  base: ghcr.io/vanilla-os/desktop:main
   singlelayer: false
   labels:
     maintainer: pixl_xip # Optionally, Replace this with your name
@@ -33,8 +33,6 @@ stages:
       - python3-cairo
       - libfuse2t64
       - git
-      - rclone
-      - input-remapper-gtk
       - rustup
 
   - name: rustup
