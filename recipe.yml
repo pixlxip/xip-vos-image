@@ -34,6 +34,7 @@ stages:
       - libfuse2t64
       - git
       - rustup
+      - gcc
 
   - name: rustup
     type: shell
@@ -53,6 +54,7 @@ stages:
   - name: cleanup
     type: shell
     commands:
+    - apt-get remove rustup gcc
     - apt-get autoremove -y
     - apt-get clean
     - lpkg --lock
