@@ -54,7 +54,7 @@ stages:
   - name: cleanup
     type: shell
     commands:
-    - apt-get remove rustup gcc
+    - apt-get remove rustup gcc -y
     - apt-get autoremove -y
     - apt-get clean
     - lpkg --lock
