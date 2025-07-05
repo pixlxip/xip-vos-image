@@ -27,12 +27,9 @@ stages:
     type: apt
     source:
       packages:
-      - vim
-      - neovim
       - python3-nautilus
       - python3-cairo
       - libfuse2t64
-      - git
       - rustup
       - gcc
 
